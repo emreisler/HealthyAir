@@ -2,12 +2,17 @@ package prototype.app.healtyairapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 public class NameActivity extends AppCompatActivity {
     Button goBlutoothButton;
@@ -33,7 +38,6 @@ public class NameActivity extends AppCompatActivity {
             System.out.println(""+e);
         }
 
-
         goBlutoothButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,8 +47,10 @@ public class NameActivity extends AppCompatActivity {
                 catch (Exception e){
                     nameSurname = "Mr/Mrs. Sir";
                 }
-
-                Intent intentBlutooth = new Intent(NameActivity.this, BlutoothActivity.class);
+                String text = "" + surname.getText().toString() + "," + name.getText().toString();
+                BluetoothActivity.nameSurname = "Mr/Mrs." + surname.getText().toString() + " " + name.getText().toString();
+                writeToFile(text,NameActivity.this);
+                Intent intentBlutooth = new Intent(NameActivity.this, BluetoothActivity.class);
                 intentBlutooth.putExtra("tools",tools);
                 intentBlutooth.putExtra("nameSurname", nameSurname);
                 startActivity(intentBlutooth);
@@ -70,12 +76,17 @@ public class NameActivity extends AppCompatActivity {
         disiaseViewText.setText("Your disiase selections are saved.");
     }
 
-    //This parts will be added
-    private void getLogInRequest() {
-        //Request log-in from server.
+    private void writeToFile(String data, Context context) {
+
+        try {
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("config.txt", Context.MODE_PRIVATE));
+            outputStreamWriter.write(data);
+            outputStreamWriter.close();
+        }
+        catch (IOException e) {
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
     }
 
-    private void createNewUser() {
-        // Create new table in database
-    }
+
 }

@@ -13,13 +13,6 @@
         android:id="@+id/frame_layout">
 
         <Button
-            android:id="@+id/exploreButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:text="EXPLORE" />
-
-        <Button
             android:id="@+id/back_to_blutooth_activity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,26 +20,11 @@
             android:text="BACK" />
 
         <Button
-            android:id="@+id/getAirQuality"
+            android:id="@+id/suggest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|start"
-            android:text="GET AIR QUALITY INFO"
-            android:enabled="false"/>
-        <!--
-        <Button
-            android:id="@+id/latlon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|center"
-            android:text="BACK" />
-        <Button
-            android:id="@+id/infoLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center"
-            android:text="TextView"
-            android:textSize="18sp" />
-        -->
+            android:layout_gravity="end|end"
+            android:text="SUGGEST SOME PLACES" />
+
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

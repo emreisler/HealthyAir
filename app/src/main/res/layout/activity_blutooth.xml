@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlutoothActivity">
+    tools:context=".BluetoothActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,83 +14,26 @@
         tools:layout_editor_absoluteY="312dp">
 
         <Button
-            android:id="@+id/search_blutooth_devices_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SEARCH FOR DEVICES"
-            android:layout_margin="20dp"/>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="30dp"
-            android:layout_margin="20dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/deviceFound"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Device Found : " />
-
-                <TextView
-                    android:id="@+id/meas1Text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Measurement 1 : " />
-
-                <TextView
-                    android:id="@+id/meas2Text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Measurement 2 : " />
-
-                <TextView
-                    android:id="@+id/meas3Text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Measurement 3 : " />
-
-                <TextView
-                    android:id="@+id/meas4Text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Measurement 4 : " />
-                <TextView
-                    android:id="@+id/meas5Text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Measurement 5 : " />
-            </LinearLayout>
-        </ScrollView>
-
-        <Button
-            android:id="@+id/get_measurements"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="GET AIR MEASUREMENTS"
-            android:layout_margin="20dp"/>
-
-        <Button
             android:id="@+id/next_to_map_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DONE"
-            android:layout_margin="20dp"/>
+            android:text="GET AIR QUALITY"
+            android:layout_margin="30dp"/>
+
 
         <Button
             android:id="@+id/back_to_name_activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="BACK"
-            android:layout_margin="20dp"/>
+            android:layout_margin="30dp"/>
 
         <TextView
             android:id="@+id/status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
